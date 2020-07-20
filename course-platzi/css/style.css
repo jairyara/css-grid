@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.hero {
+    background-color: #23475b;
+    color: white;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: minmax(auto, 1024px);
+    justify-content: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 70px 1fr 320px;
+    grid-template-areas: "badge title form" ". description form" ". countdown-title form" ". countdown form";
+}
+
+.badge {
+    grid-area: badge;
+}
+
+.badge img {
+    max-width: 70px;
+}
+
+.title {
+    grid-area: title;
+    font-size: 2.125rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    grid-area: description;
+}
+
+.form {
+    grid-area: form;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #dbdbe2;
+    margin-bottom: 1rem;
+}
+
+.form p {
+    font-size: 20px;
+    color: #3a3b3f;
+    margin-bottom: 1em;
+}
+
+.form button {
+    background: #98ca3f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 5px solid #6d932b;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.countdown {
+    grid-area: countdown;
+    display: flex;
+}
+
+.countdown-title {
+    grid-area: countdown-title;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.countdown span {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 70px 1fr;
+        grid-template-areas: "badge title" ". description" "form form" ". countdown";
+    }
+}

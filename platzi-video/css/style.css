@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-areas: "aside dashboard" "footer footer";
+}
+
+.aside {
+    grid-area: aside;
+    background: #151b31;
+    color: whitesmoke;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: 90px 2fr 1fr;
+    padding: 0 1rem 3rem;
+}
+
+.logo {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 3rem;
+}
+
+.logo-text span {
+    color: #dc3545;
+    font-weight: 900;
+}
+
+.playlist {
+    padding: 1rem;
+}
+
+.playlist h5 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.playlist ol {
+    margin: 0 1rem;
+}
+
+.playlist ol li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-detail {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.profile-detail img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 1rem;
+}
+
+.profile-name {
+    color: white;
+    text-decoration: none;
+}
+
+.dashboard {
+    grid-area: dashboard;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "video video video" "video-actions video-actions video-actions" "video-comments video-comments video-suggest";
+}
+
+.video {
+    grid-area: video;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "arrow";
+}
+
+.arrow {
+    z-index: 3;
+    color: white;
+    font-size: 24px;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.video-arrow {
+    grid-area: arrow;
+}
+
+.video-file {
+    width: 100%;
+}
+
+.video-actions {
+    grid-area: video-actions;
+    padding: 2rem 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "video-actions-info video-actions-info video-actions-info" "video-actions-share video-categories video-categories";
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.video-actions-info {
+    grid-area: video-actions-info;
+    margin-bottom: 1rem;
+}
+
+.video-actions-share {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.add-video {
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: #dc3545;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.share-video,
+.save-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #151b31;
+}
+
+.share-video i,
+.save-video i {
+    margin-right: 8px;
+}
+
+.video-views {
+    color: #666;
+    font-size: 20px;
+}
+
+.video-categories {
+    grid-area: video-categories;
+    display: flex;
+    align-items: center;
+}
+
+.video-categories button {
+    margin-right: 20px;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+}
+
+.categories-one {
+    background: teal;
+}
+
+.categories-two {
+    background: turquoise;
+}
+
+.categories-three {
+    background: slateblue;
+}
+
+.video-comments {
+    grid-area: video-comments;
+    padding: 2rem;
+}
+
+.comments-title,
+.suggest-title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.comments-box {
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.comments-box img {
+    width: 40px;
+    border-radius: 20px;
+    margin-right: 1rem;
+}
+
+.comments-box input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    background: transparent;
+    color: #2a2a2a;
+    outline: none;
+    font-size: 20px;
+}
+
+.other-comments {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.other-comments img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 1rem;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.video-suggest {
+    grid-area: video-suggest;
+    padding: 2rem;
+}
+
+.suggest-item {
+    margin-bottom: 1rem;
+}
+
+.suggest-item img {
+    width: 300px;
+    height: 200px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.description-suggest {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer {
+    height: 3rem;
+    background: #dc3545;
+    grid-area: footer;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
